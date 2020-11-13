@@ -1,12 +1,12 @@
 {
-    "family": "bgtest",
+    "family": "bgtest-td",
     "executionRoleArn": "arn:aws:iam::465464725359:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
     "requiresCompatibilities": [
         "FARGATE"
     ],
-    "cpu": "128",
-    "memory": "256",
+    "cpu": "0",
+    "memory": "512",
     "taskRoleArn": "arn:aws:iam::465464725359:role/ecsTaskExecutionRole",    
     "containerDefinitions": [
         {
@@ -23,7 +23,7 @@
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
-                    "awslogs-group": "/ecs/bgtest",
+                    "awslogs-group": "/ecs/bgtest-td",
                     "awslogs-region": "us-west-1",
                     "awslogs-stream-prefix": "ecs"
                 }
