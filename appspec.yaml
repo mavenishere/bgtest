@@ -15,4 +15,4 @@ Resources:
             SecurityGroups: ["sg-0c159ee54364e895f"]
             AssignPublicIp: "ENABLED"
 Hooks:
-  - AfterAllowTestTraffic: "lambdatesttraffic"            
+  - AfterAllowTestTraffic: "arn:aws:lambda:us-west-1:465464725359:function:lambdatesttraffic"            
