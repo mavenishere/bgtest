@@ -1,0 +1,16 @@
+
+version: 0.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: <TASK_DEFINITION>
+        LoadBalancerInfo:
+          ContainerName: "bgtest"
+          ContainerPort: 80
+        PlatformVersion: "LATEST"
+        NetworkConfiguration:
+          AwsvpcConfiguration:
+            Subnets: ["subnet-e6e4d7bd","subnet-9511f6f3"]
+            SecurityGroups: ["sg-581d7e22,"]
+            AssignPublicIp: "DISABLED"
